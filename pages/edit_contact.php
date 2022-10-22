@@ -15,7 +15,7 @@
   }
 
   $contact = Contact::get_one($decrypt_id);
-?>  
+?>
 
 <style>
 
@@ -28,25 +28,27 @@ div {
 <body>
   <h2>Editar Contato</h2>
 
-  <form action="../controllers/contact/update.php" method="post">
+  <form id="form" action="../controllers/contact/update.php" method="post">
     <div>
-      <label for="name" id="name">Nome:</label>
+      <label for="name">Nome:</label>
       <input value="<?= $contact->name ?>" id="name" name="name" type="text">
     </div>
 
     <div>
-      <label for="phone" id="phone">Telefone:</label>
+      <label for="phone">Telefone:</label>
       <input value="<?= $contact->phone ?>" id="phone" name="phone" type="tel">
     </div>
 
     <div>
-      <label for="email" id="email">E-mail:</label>
+      <label for="email">E-mail:</label>
       <input value="<?= $contact->email ?>" id="email" name="email" type="email">
     </div>
 
     <input value="<?= $contact_id ?>" type="hidden" name="id">
 
-    <button type="submit" name="edit_contact">Save</button>
+    <button type="submit" name="edit_contact" id="submit_contact" >Save</button>
+    <div id="error"></div>
   </form>
+  <script src="/public/assets/js/bundle.js"></script>
 </body>
 </html>

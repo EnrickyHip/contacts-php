@@ -10,10 +10,10 @@ delete_contact();
 function delete_contact() {
   $contact_id = aes_decrypt($_GET['id']);
   $contact = Contact::get_one($contact_id);
-  
+
   if ($contact) {
     $contact->delete();
   }
-  
-  header("Location: /Contatos");
-}  
+
+  header("Location: /pages");
+}

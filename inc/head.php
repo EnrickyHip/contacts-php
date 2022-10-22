@@ -1,5 +1,5 @@
 <?php
- 
+
 function head(string $title) { ?>
   <head>
     <meta charset="UTF-8">

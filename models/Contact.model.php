@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 require_once __DIR__ . "/../database/Database.php";
 
-class Contact { 
+class Contact {
   public readonly string | int $id;
 
   private function __construct(
-    string | int $id, 
+    string | int $id,
     public string $name,
     public string $phone,
     public string $email,
@@ -40,16 +40,16 @@ class Contact {
       $query = Database::get_database()->prepare($sql);
       $query->execute();
       $contacts = $query->fetchAll(PDO::FETCH_ASSOC);
-  
+
       return array_map(
-        fn($contact) => new Contact($contact['id'], $contact['nome'], $contact['telefone'], $contact['email']), 
+        fn($contact) => new Contact($contact['id'], $contact['nome'], $contact['telefone'], $contact['email']),
         $contacts
       );
     } catch (PDOException $exception) {
       throw $exception;
     }
   }
- 
+
   public static function get_one(string | int $id): Contact | null {
     try {
       $sql = "SELECT * FROM contato WHERE id = ?";
@@ -58,7 +58,7 @@ class Contact {
 
       if ($query->rowCount() > 0) {
         $contact = $query->fetchAll(PDO::FETCH_ASSOC)[0];
-        
+
         $name = $contact['nome'];
         $phone = $contact['telefone'];
         $email = $contact['email'];
@@ -83,7 +83,7 @@ class Contact {
 
   public function update(string $name, string $phone, string $email): Contact {
     try {
-      $sql = "UPDATE contato 
+      $sql = "UPDATE contato
               SET nome = :nome,
                   telefone = :telefone,
                   email = :email
