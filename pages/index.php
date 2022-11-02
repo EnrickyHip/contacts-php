@@ -8,7 +8,7 @@
   require_once __DIR__ . '/../encrypt.php';
 
   head(title: "Contatos");
-  $contacts = Contact::get_all();
+  $contacts = array_reverse(Contact::get_all());
 
 ?>
 

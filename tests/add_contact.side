@@ -1,0 +1,415 @@
+{
+  "id": "44bc7b56-66f2-4f48-ae95-d292171e064c",
+  "version": "2.0",
+  "name": "Contact",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "5c8d3e40-e9f1-483c-a814-3f641d47b518",
+    "name": "add-contact",
+    "commands": [{
+      "id": "3b24a08c-d846-4a24-86b8-6f6fc744fea7",
+      "comment": "",
+      "command": "open",
+      "target": "/pages/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "433eac22-bd51-46eb-8088-b452a6d141d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Contato",
+      "targets": [
+        ["linkText=Cadastrar Contato", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Contato')]", "xpath:link"],
+        ["xpath=//a[contains(@href, './add_contact.php')]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Contato')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d6ed5ab-4f46-4b91-bdb4-80a3ae87f739",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af724624-1725-450f-85fc-39b8b029d596",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c2572f5-e060-4915-a6f0-3dd47d6623ea",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fb5f8ec-9e5f-4e9b-ab34-62ce716b2383",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=name-error",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//p[@id='name-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'name cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ffe9006-715e-4094-8b69-16735ff81cad",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=email-error",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//p[@id='name-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'name cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffb042e9-413d-4643-a3cd-28d53e910fd8",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=phone-error",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//p[@id='name-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'name cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb8cd2b1-625d-4539-b0e9-ca7a2587721d",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit_contact",
+      "targets": [
+        ["id=submit_contact", "id"],
+        ["name=submit_contact", "name"],
+        ["css=#submit_contact", "css:finder"],
+        ["xpath=//button[@id='submit_contact']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bbbab37-1b33-4bbe-bada-1101c390d872",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=name-error",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//p[@id='name-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'name cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76e2d2e7-bb46-4454-8500-0af7f3e751e4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=phone-error",
+      "targets": [
+        ["id=phone-error", "id"],
+        ["css=#phone-error", "css:finder"],
+        ["xpath=//p[@id='phone-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'phone cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cf23ec4-eab7-4925-bfd2-d4b629202cf6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=email-error",
+      "targets": [
+        ["id=email-error", "id"],
+        ["css=#email-error", "css:finder"],
+        ["xpath=//p[@id='email-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"],
+        ["xpath=//p[contains(.,'email cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aae04b1-b4f8-4ade-bf06-28763b51ab56",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe387051-f9e1-422a-8e28-eecb830b5f88",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "nome"
+    }, {
+      "id": "86900381-7a4b-46b3-8923-d33f1227347b",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit_contact",
+      "targets": [
+        ["id=submit_contact", "id"],
+        ["name=submit_contact", "name"],
+        ["css=#submit_contact", "css:finder"],
+        ["xpath=//button[@id='submit_contact']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d935c890-e459-49dd-af01-ad1b7985fa87",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=phone-error",
+      "targets": [
+        ["id=phone-error", "id"],
+        ["css=#phone-error", "css:finder"],
+        ["xpath=//p[@id='phone-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'phone cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31e72dbe-f934-44e6-9f93-d079896ed1f4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=email-error",
+      "targets": [
+        ["id=email-error", "id"],
+        ["css=#email-error", "css:finder"],
+        ["xpath=//p[@id='email-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'email cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4cfcb5c-1c2c-4af1-8f39-733264cd10e3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=name-error",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//p[@id='name-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'name cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e479c77-8621-48b5-b34d-e76c145ecdf6",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f372314f-7d00-4054-9d00-1c951d120514",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12123132132"
+    }, {
+      "id": "c049d72b-3c71-434e-b393-d9468d3b9f31",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit_contact",
+      "targets": [
+        ["id=submit_contact", "id"],
+        ["name=submit_contact", "name"],
+        ["css=#submit_contact", "css:finder"],
+        ["xpath=//button[@id='submit_contact']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "899ec56e-8719-4604-a8f6-07b96519524b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=email-error",
+      "targets": [
+        ["id=email-error", "id"],
+        ["css=#email-error", "css:finder"],
+        ["xpath=//p[@id='email-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'email cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2d91f94-b841-44ef-8c1c-3bcb570276a8",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=name-error",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//p[@id='name-error']", "xpath:attributes"],
+        ["xpath=//div[@id='error']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'name cannot be null')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3f488fe-b383-4dab-bcf1-a633b6882ac2",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=phone-error",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40ff7993-c149-4874-8977-d0e500f11d97",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4e2fd9b-4f5f-4836-8e0b-874612be67b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "email@email.com"
+    }, {
+      "id": "486d76f6-aa19-4b03-962f-0fd4ff2a63ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit_contact",
+      "targets": [
+        ["id=submit_contact", "id"],
+        ["name=submit_contact", "name"],
+        ["css=#submit_contact", "css:finder"],
+        ["xpath=//button[@id='submit_contact']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e844e389-08c0-41f6-9a0a-854ed6b1dfca",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//td[contains(.,'nome')]",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[5]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'nome')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc3bbc58-b11e-4024-8874-3d00d2941346",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//td[contains(.,'12123132132')]",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'12123132132')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c679984-4b31-4688-9889-e552f243da42",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//td[contains(.,'email@email.com')]",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(3)", "css:finder"],
+        ["xpath=//tr[5]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'email@email.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0b3eabea-b486-408c-9708-0b24e913d9c3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5c8d3e40-e9f1-483c-a814-3f641d47b518"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}
